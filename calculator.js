@@ -1,5 +1,5 @@
-//Creating variables to do arithmetic operations , desired operation, result, and the option to do another operation for a calculator
-let num1, num2, desiredOperation, option = "y", result;
+//Creating variables to do arithmetic operations , desired operation, result, and the continue operation option to do another operation for a calculator
+let num1, num2, desiredOperation, continueOperation = "y", result;
 
 //Creating an array to store the calculation history
 const calculationHistory = [];
@@ -85,22 +85,22 @@ function displayHistory() {
     else { // This is shown if there are objects in the calculationHistory array
         alert("This is your calculation history: (press enter or click on ok)")
         console.log("This is your calculation history:")
-        for(let i = 0; i < calculationHistory.length; i++) {
-            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]}. = ${calculationHistory[i].result}`)
-            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]}. = ${calculationHistory[i].result}`)
+        for(let i = 0; i < calculationHistory.length; i++) { //This for loop lets print all the object values in the array with the proper message
+            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]} = ${calculationHistory[i].result}`)
+            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]} = ${calculationHistory[i].result}`)
         }
     }
 }
 
 //While loop to do multiple operations
-while (option.toLowerCase() === "y") {
+while (continueOperation.toLowerCase() === "y") {
 
     //Ask the user for the desired operation
     desiredOperation = prompt("Please select your desired operation:\nType 1 for Addition\nType 2 for Subtraction\nType 3 for Multiplication\nType 4 for Division\nType 5 to see the calculation history\nType 6 to exit");
     
     //While loop to make sure the user typed a valid option
     while (desiredOperation !== "1" && desiredOperation !== "2" && desiredOperation !== "3" && desiredOperation !== "4" && desiredOperation !== "5" && desiredOperation !== "6") {
-        desiredOperation = prompt("You've entered an invalid option. Please try again:\nType 1 for Addition\nType 2 for Subtraction\nType 3 for Multiplication\nType 4 for Division")
+        desiredOperation = prompt("You've entered an invalid option. Please try again:\nType 1 for Addition\nType 2 for Subtraction\nType 3 for Multiplication\nType 4 for Division\nType 5 for to see the calculation history\nType 6 to exit the program")
     }
     
     //Doing the addition operation when the desired option is 1
@@ -184,9 +184,9 @@ while (option.toLowerCase() === "y") {
     }
 
     //Ask if the user wants do do another operation
-    option = prompt("Would you like to do another operation?\nPlease type y (if yes)\nPlease type n (if no)") //This question stores a new value in the variable option. If it is "y", the user will be asked again to choose an operation. If it is "n", the program will end
-    while (option.toLowerCase() !== "y" && option.toLowerCase() !== "n") { //This loop is to ensure that the user enter a valid option
-        option = prompt("You've entered an invalid option. Please try again:\n")
+    continueOperation = prompt("Would you like to do another operation?\nPlease type y (if yes)\nPlease type n (if no)") //This question stores a new value in the variable option. If it is "y", the user will be asked again to choose an operation. If it is "n", the program will end
+    while (continueOperation.toLowerCase() !== "y" && continueOperation.toLowerCase() !== "n") { //This loop is to ensure that the user enter a valid option
+        continueOperation = prompt("You've entered an invalid option. Please try again:\n")
     }
 }
 
