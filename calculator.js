@@ -190,4 +190,4 @@ while (continueOperation.toLowerCase() === "y") {
     }
 }
 
-alert("Good bye!");
+alert("Thank you for using this program. Good bye!");
