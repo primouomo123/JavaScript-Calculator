@@ -2,7 +2,7 @@
 
 Please run this code in Google Chrome Developer Tools console
 
-Tese are the instructions given by AI Overview on google.com:
+These are the instructions given by AI Overview on google.com:
 To open the Google Chrome Developer Tools console, you can use keyboard shortcuts or the browser menu. For Windows and Linux, use Ctrl + Shift + J. For Mac, use Cmd + Opt + J. Alternatively, right-click on any page element and select "Inspect," then navigate to the "Console" tab. You can also find it under Chrome's "More Tools" menu. 
 Here's a more detailed breakdown:
 1. Using Keyboard Shortcuts:
