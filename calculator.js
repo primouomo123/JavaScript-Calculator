@@ -38,6 +38,7 @@ function storeHistory() {
         operation: "Addition",
         "first number": num1,
         "second number": num2,
+        operator: "+",
         result: result
         }
         return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
@@ -48,6 +49,7 @@ function storeHistory() {
         operation: "Subtraction",
         "first number": num1,
         "second number": num2,
+        operator: "-",
         result: result
         }
         return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
@@ -58,6 +60,7 @@ function storeHistory() {
         operation: "Multiplication",
         "first number": num1,
         "second number": num2,
+        operator: "*",
         result: result
         }
         return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
@@ -67,6 +70,7 @@ function storeHistory() {
         operation: "Division",
         "first number": num1,
         "second number": num2,
+        operator: "/",
         result: result
         }
         return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
@@ -82,8 +86,8 @@ function displayHistory() {
         alert("This is your calculation history: (press enter or click on ok)")
         console.log("This is your calculation history:")
         for(let i = 0; i < calculationHistory.length; i++) {
-            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}. The first number was ${calculationHistory[i]["first number"]} and the second number was ${calculationHistory[i]["second number"]}. The result was ${calculationHistory[i].result}`)
-            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}. The first number was ${calculationHistory[i]["first number"]} and the second number was ${calculationHistory[i]["second number"]}. The result was ${calculationHistory[i].result}`)
+            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]}. = ${calculationHistory[i].result}`)
+            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]}. = ${calculationHistory[i].result}`)
         }
     }
 }
@@ -175,9 +179,15 @@ while (option.toLowerCase() === "y") {
         displayHistory(); //Displaying the calculation data
     }
 
+    else if (desiredOperation === "6") {
+        break;
+    }
+
     //Ask if the user wants do do another operation
-    option = prompt("Would you like to do another operation?\nPlease type y (if yes)\nPlease type n (if no") //This question stores a new value in the variable option. If it is "y", the user will be asked again to choose an operation. If it is "n", the program will end
+    option = prompt("Would you like to do another operation?\nPlease type y (if yes)\nPlease type n (if no)") //This question stores a new value in the variable option. If it is "y", the user will be asked again to choose an operation. If it is "n", the program will end
     while (option.toLowerCase() !== "y" && option.toLowerCase() !== "n") { //This loop is to ensure that the user enter a valid option
         option = prompt("You've entered an invalid option. Please try again:\n")
     }
 }
+
+alert("Good bye!");
