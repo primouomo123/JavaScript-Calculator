@@ -186,7 +186,7 @@ while (continueOperation.toLowerCase() === "y") {
     //Ask if the user wants do do another operation
     continueOperation = prompt("Would you like to do another operation?\nPlease type y (if yes)\nPlease type n (if no)") //This question stores a new value in the variable option. If it is "y", the user will be asked again to choose an operation. If it is "n", the program will end
     while (continueOperation.toLowerCase() !== "y" && continueOperation.toLowerCase() !== "n") { //This loop is to ensure that the user enter a valid option
-        continueOperation = prompt("You've entered an invalid option. Please try again:\n")
+        continueOperation = prompt("You've entered an invalid option. Please try again:\nPlease type y (if yes)\nPlease type n (if no)")
     }
 }
 
