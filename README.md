@@ -17,3 +17,17 @@ The developer tools will open, and you can then select the "Console" tab.
 Right-click on any element of the webpage you want to inspect.
 Select "Inspect" from the context menu.
 The developer tools will open, and the "Elements" panel will be active. Click on the "Console" tab to view it.
+
+
+
+This calculator will help you do the basic arithmetic operations and store your calculation history. It was made to be very easy to use.
+
+When running the program, you will be ask to type a number from 1 to 6 to do different things:
+1. For addition.
+2. For subtraction.
+3. For multiplication.
+4. For division.
+5. To see the calculation history.
+6. To exit the program.
+
+Additionally, when you complete an operaton, the program will ask if you would like to continue. You'll have to type "y" (if yes) or "n" (if no).
