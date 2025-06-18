@@ -117,7 +117,7 @@ while (continueOperation.toLowerCase() === "y") {
             num2 = Number(prompt("You've entered an invalid option. Please type a number"));
         }
         result = add(num1, num2); //Getting the result through the add function
-        alert(`The sum of ${num1} + ${num2} is ${result}`); //Showing the result to the user
+        alert(`The sum of ${num1} + ${num2} = ${result}`); //Showing the result to the user
         storeHistory(); //Storing the calculation data
     }
 
@@ -135,7 +135,7 @@ while (continueOperation.toLowerCase() === "y") {
             num2 = Number(prompt("You've entered an invalid option. Please type a number"));
         }
         result = subtract(num1, num2); //Getting the result through the subtract function
-        alert(`The difference of ${num1} - ${num2} is ${result}`); //Showing the result to the user
+        alert(`The difference of ${num1} - ${num2} = ${result}`); //Showing the result to the user
         storeHistory(); //Storing the calculation data
     }
 
@@ -153,7 +153,7 @@ while (continueOperation.toLowerCase() === "y") {
             num2 = Number(prompt("You've entered an invalid option. Please type a number"));
         }
         result = multiply(num1, num2); //Getting the result through the multiply function
-        alert(`The product of ${num1} * ${num2} is ${result}`); //Showing the result to the user
+        alert(`The product of ${num1} * ${num2} = ${result}`); //Showing the result to the user
         storeHistory(); //Storing the calculation data
     }
 
@@ -171,7 +171,7 @@ while (continueOperation.toLowerCase() === "y") {
             num2 = Number(prompt("You've entered an invalid option. Please type a number (it must be different from 0)"));
         }
         result = divide(num1, num2); //Getting the result through the divide function
-        alert(`The quotient of ${num1} / ${num2} is ${result}`); //Showing the result to the user
+        alert(`The quotient of ${num1} / ${num2} = ${result}`); //Showing the result to the user
         storeHistory(); //Storing the calculation data
     }
 
