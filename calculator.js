@@ -82,8 +82,8 @@ function displayHistory() {
         alert("This is your calculation history: (press enter or click on ok)")
         console.log("This is your calculation history:")
         for(let i = 0; i < calculationHistory.length; i++) { //This for loop lets print all the object values in the array with the proper message
-            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i][operand1]} ${calculationHistory[i].operator} ${calculationHistory[i][operand2]} = ${calculationHistory[i].result}`)
-            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i][operand1]} ${calculationHistory[i].operator} ${calculationHistory[i][operand2]} = ${calculationHistory[i].result}`)
+            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["operand1"]} ${calculationHistory[i].operator} ${calculationHistory[i]["operand2"]} = ${calculationHistory[i].result}`)
+            console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["operand1"]} ${calculationHistory[i].operator} ${calculationHistory[i]["operand2"]} = ${calculationHistory[i].result}`)
         }
     }
 }
