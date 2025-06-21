@@ -34,46 +34,42 @@ function divide(num1, num2) {
 //Function to store calculation data
 function storeHistory() {
     if (desiredOperation === "1") {
-        let newHistoryObject = { //This is the object to store the operation
+        return calculationHistory.push({ //Here we store the object in the calculationHistoryarray
         operation: "Addition",
-        "first number": num1,
-        "second number": num2,
+        "operand1": num1,
+        "operand2": num2,
         operator: "+",
         result: result
-        }
-        return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
+        });
     }
 
     else if (desiredOperation === "2") {
-        let newHistoryObject = { //This is the object to store the operation
+        return calculationHistory.push({ //Here we store the object in the calculationHistoryarray
         operation: "Subtraction",
-        "first number": num1,
-        "second number": num2,
+        "operand1": num1,
+        "operand2": num2,
         operator: "-",
         result: result
-        }
-        return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
+        });
     }
 
     else if (desiredOperation === "3") {
-        let newHistoryObject = { //This is the object to store the operation
+        return calculationHistory.push({ //Here we store the object in the calculationHistoryarray
         operation: "Multiplication",
-        "first number": num1,
-        "second number": num2,
+        "operand1": num1,
+        "operand2": num2,
         operator: "*",
         result: result
-        }
-        return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
+        });
     }
     else if (desiredOperation === "4") {
-        let newHistoryObject = { //This is the object to store the operation
+        return calculationHistory.push({ //Here we store the object in the calculationHistoryarray
         operation: "Division",
-        "first number": num1,
-        "second number": num2,
+        "operand1": num1,
+        "operand2": num2,
         operator: "/",
         result: result
-        }
-        return calculationHistory.push(newHistoryObject); //Here we store the object in the calculationHistoryarray
+        });
     }
 }
 
@@ -86,7 +82,7 @@ function displayHistory() {
         alert("This is your calculation history: (press enter or click on ok)")
         console.log("This is your calculation history:")
         for(let i = 0; i < calculationHistory.length; i++) { //This for loop lets print all the object values in the array with the proper message
-            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]} = ${calculationHistory[i].result}`)
+            alert(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["operand1"]} ${calculationHistory[i].operator} ${calculationHistory[i]["operand2"]} = ${calculationHistory[i].result}`)
             console.log(`The operation number ${i + 1} was ${calculationHistory[i].operation}: ${calculationHistory[i]["first number"]} ${calculationHistory[i].operator} ${calculationHistory[i]["second number"]} = ${calculationHistory[i].result}`)
         }
     }
